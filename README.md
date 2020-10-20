@@ -5,9 +5,13 @@ Home: https://github.com/SMTG-UCL/sumo
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sumo-feedstock/blob/master/LICENSE.txt)
 
 Summary: Heavy weight plotting tools for ab initio solid-state calculations
+
+Development: https://github.com/SMTG-UCL/sumo
+
+Documentation: https://sumo.readthedocs.io/en/latest/
 
 Sumo is a Python toolkit for plotting and analysis of ab initio
 solid-state calculation data, built on existing Python packages from

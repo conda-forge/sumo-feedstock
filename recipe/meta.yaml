@@ -1,5 +1,5 @@
 {% set name = "sumo" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 53b00ce332eaf95dcf47b3618f6da2593aef2ab7f4f80359976b5f4c03ebd32e
+  sha256: 10ec3edde1a776d7ddd7adee65328f563b1a3bfd7e69c497dd12f39635fd24e2
 
 build:
   number: 0
