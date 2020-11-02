@@ -10,7 +10,7 @@ source:
   sha256: 77e539e2cc881e132bfa18df8cfc5721913577b88fa41f8ec8a75b7853f60bc1
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - sumo-bandplot = sumo.cli.bandplot:main
     - sumo-bandstats = sumo.cli.bandstats:main
