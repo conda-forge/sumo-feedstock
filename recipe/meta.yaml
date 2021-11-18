@@ -10,7 +10,7 @@ source:
   sha256: cf4c94e7d93f01d47c9089f0f13ab8d1f26fdf380e77d4041e1a8a2e7459e109
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - sumo-bandplot = sumo.cli.bandplot:main
     - sumo-bandstats = sumo.cli.bandstats:main
@@ -34,7 +34,7 @@ requirements:
     - scipy
     - seekpath
     - spglib
-    - castepxbin
+    - castepxbin =0.1.0
 
 test:
   imports:
