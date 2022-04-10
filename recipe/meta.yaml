@@ -1,5 +1,5 @@
 {% set name = "sumo" %}
-{% set version = "2.2.5" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cf4c94e7d93f01d47c9089f0f13ab8d1f26fdf380e77d4041e1a8a2e7459e109
+  sha256: aa37bb8eba915f0cf3851814a9fd4fcde9c648b5fa8c7863703cbbdc3f9b8f0a
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - sumo-bandplot = sumo.cli.bandplot:main
     - sumo-bandstats = sumo.cli.bandstats:main
