@@ -35,6 +35,7 @@ requirements:
     - seekpath
     - spglib
     - castepxbin =0.1.0
+    - colormath
 
 test:
   imports:
