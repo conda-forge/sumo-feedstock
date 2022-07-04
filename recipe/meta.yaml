@@ -19,18 +19,19 @@ build:
     - sumo-phonon-bandplot = sumo.cli.phonon_bandplot:main
     - sumo-optplot = sumo.cli.optplot:main
   script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.8
   run:
     - monty
     - matplotlib-base
     - numpy
     - phonopy >=2.1.3
     - pymatgen
-    - python
+    - python >=3.8
     - scipy
     - seekpath
     - spglib
