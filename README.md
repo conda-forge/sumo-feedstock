@@ -1,11 +1,11 @@
-About sumo
-==========
+About sumo-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sumo-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/SMTG-UCL/sumo
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sumo-feedstock/blob/main/LICENSE.txt)
 
 Summary: Heavy weight plotting tools for ab initio solid-state calculations
 
