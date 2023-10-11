@@ -37,6 +37,7 @@ requirements:
     - spglib
     - castepxbin =0.1.0
     - colormath
+    - importlib-resources
 
 test:
   imports:
