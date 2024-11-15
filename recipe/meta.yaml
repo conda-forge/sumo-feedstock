@@ -1,5 +1,5 @@
 {% set name = "sumo" %}
-{% set version = "2.3.8" %}
+{% set version = "2.3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2d672dd0e9ea8c3248da6325bdb482e2ebef28f7e03121c0bb78b3d9f7aa44e1
+  sha256: 944d2569dbf3fe9c05a81fa9042e98e7b349d42d5c00a380f8544b7d1ea8df1d
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools
   run:
     - monty
     - matplotlib-base
