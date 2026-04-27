@@ -1,0 +1,83 @@
+schema_version: 1
+
+context:
+  name: sumo
+  version: 2.4.0.post1
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: bb7e58aac2c4c1f38d15229253d17af9caa1219589f99aa82404be3702664473
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - sumo-bandplot = sumo.cli.bandplot:main
+      - sumo-bandstats = sumo.cli.bandstats:main
+      - sumo-dosplot = sumo.cli.dosplot:main
+      - sumo-kgen = sumo.cli.kgen:main
+      - sumo-phonon-bandplot = sumo.cli.phonon_bandplot:main
+      - sumo-optplot = sumo.cli.optplot:main
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - monty
+    - matplotlib-base
+    - numpy
+    - phonopy >=2.1.3
+    - pymatgen
+    - python >=${{ python_min }}
+    - scipy
+    - seekpath
+    - spglib
+    - castepxbin =0.1.0
+    - colormath
+    - importlib-resources
+
+tests:
+  - python:
+      imports:
+        - sumo
+        - sumo.cli
+      pip_check: true
+      python_version: ${{ python_min }}
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - sumo-bandplot --help
+      - sumo-bandstats --help
+      - sumo-dosplot --help
+      - sumo-kgen --help
+      - sumo-phonon-bandplot --help
+      - sumo-optplot --help
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: Heavy weight plotting tools for ab initio solid-state calculations
+  description: |
+    Sumo is a Python toolkit for plotting and analysis of ab initio
+    solid-state calculation data, built on existing Python packages from
+    the solid-state chemistry/physics community. It is hoped that these
+    command-line tools will bring some of the benefits of these libraries
+    to a wider user-base while providing publication-ready plotting
+    (powered by Matplotlib.)
+  homepage: https://github.com/SMTG-UCL/sumo
+  repository: https://github.com/SMTG-UCL/sumo
+  documentation: https://sumo.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
