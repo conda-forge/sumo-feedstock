@@ -20,7 +20,6 @@ command-line tools will bring some of the benefits of these libraries
 to a wider user-base while providing publication-ready plotting
 (powered by Matplotlib.)
 
-
 Current build status
 ====================
 
