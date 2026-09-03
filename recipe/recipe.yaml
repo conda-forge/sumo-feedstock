@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sumo
-  version: 2.4.0.post1
+  version: "3.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: bb7e58aac2c4c1f38d15229253d17af9caa1219589f99aa82404be3702664473
+  sha256: 6b9206784464dc3e35845759106b436e32bb1cb4784d5b8a2c53b5f2969de4f1
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
